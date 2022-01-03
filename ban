@@ -1,0 +1,617 @@
+ -- thx for using scripts.axonz.me
+ game:GetService'StarterGui':SetCore('SendNotification', {
+    Title = 'Axon Scripts',
+    Text = 'Thanks For Using Axon Scripts!',
+    Icon = 'http://www.roblox.com/asset/?id=32823625',
+    Button1 = 'no problemo',
+    Duration = 10
+  })
+  -- Instances:
+  local main = Instance.new("ScreenGui")
+  local musicplayer = Instance.new("Frame")
+  local top = Instance.new("Frame")
+  local Title = Instance.new("TextLabel")
+  local x = Instance.new("TextButton")
+  local id = Instance.new("TextBox")
+  local play = Instance.new("TextButton")
+  local vol = Instance.new("TextBox")
+  local warn = Instance.new("TextLabel")
+  --Properties:
+  main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+  main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+  musicplayer.Name = "musicplayer"
+  musicplayer.Parent = main
+  musicplayer.BackgroundColor3 = Color3.fromRGB(98, 37, 209)
+  musicplayer.BorderColor3 = Color3.fromRGB(255, 255, 255)
+  musicplayer.BorderSizePixel = 5
+  musicplayer.Position = UDim2.new(0.336230874, 0, 0.550478399, 0)
+  musicplayer.Size = UDim2.new(0, 454, 0, 268)
+  musicplayer.Active = true
+  musicplayer.Draggable = true
+  top.Name = "top"
+  top.Parent = musicplayer
+  top.BackgroundColor3 = Color3.fromRGB(98, 37, 209)
+  top.BorderColor3 = Color3.fromRGB(255, 255, 255)
+  top.BorderSizePixel = 5
+  top.Position = UDim2.new(-0.000609964132, 0, -0.00405518711, 0)
+  top.Size = UDim2.new(0, 454, 0, 27)
+  Title.Name = "Title"
+  Title.Parent = top
+  Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+  Title.BackgroundTransparency = 1.000
+  Title.Position = UDim2.new(1.86264515e-09, 0, 0, 0)
+  Title.Size = UDim2.new(0, 307, 0, 27)
+  Title.Font = Enum.Font.GothamBold
+  Title.Text = "AxonZ's FE Music Player"
+  Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+  Title.TextScaled = true
+  Title.TextSize = 14.000
+  Title.TextWrapped = true
+  x.Name = "x"
+  x.Parent = top
+  x.BackgroundColor3 = Color3.fromRGB(98, 37, 209)
+  x.BorderColor3 = Color3.fromRGB(255, 255, 255)
+  x.BorderSizePixel = 5
+  x.Position = UDim2.new(0.936123371, 0, 0, 0)
+  x.Size = UDim2.new(0, 29, 0, 27)
+  x.Font = Enum.Font.GothamBlack
+  x.Text = "X"
+  x.TextColor3 = Color3.fromRGB(255, 255, 255)
+  x.TextScaled = true
+  x.TextSize = 14.000
+  x.TextWrapped = true
+  x.MouseButton1Click:Connect(function()
+      main:Destroy(1)
+  end)
+  id.Name = "id"
+  id.Parent = musicplayer
+  id.BackgroundColor3 = Color3.fromRGB(98, 37, 209)
+  id.BorderColor3 = Color3.fromRGB(255, 255, 255)
+  id.BorderSizePixel = 5
+  id.Position = UDim2.new(0.0660792887, 0, 0.171389729, 0)
+  id.Size = UDim2.new(0, 392, 0, 50)
+  id.ClearTextOnFocus = false
+  id.Font = Enum.Font.GothamBold
+  id.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+  id.PlaceholderText = "farzad babe"
+  id.Text = ""
+  id.TextColor3 = Color3.fromRGB(255, 255, 255)
+  id.TextScaled = true
+  id.TextSize = 14.000
+  id.TextWrapped = true
+  play.Name = "farzad#0001"
+  play.Parent = musicplayer
+  play.BackgroundColor3 = Color3.fromRGB(98, 37, 209)
+  play.BorderColor3 = Color3.fromRGB(255, 255, 255)
+  play.BorderSizePixel = 5
+  play.Position = UDim2.new(0.0660792887, 0, 0.691516399, 0)
+  play.Size = UDim2.new(0, 392, 0, 50)
+  play.Font = Enum.Font.GothamBlack
+  play.Text = "Play"
+  play.TextColor3 = Color3.fromRGB(255, 255, 255)
+  play.TextScaled = true
+  play.TextSize = 14.000
+  play.TextWrapped = true
+  play.MouseButton1Click:Connect(function()
+      getgenv().audioId = id.Text -- self explanatory
+      getgenv().soundVolume = vol.Text -- up to 10
+      local userdata_1 = game:GetService("Players").LocalPlayer.PlayerGui.MainGui.Menu.Emotions;
+      local userdata_2 = game:GetService("Players").LocalPlayer.PlayerGui.MainGui.Menu.Emotions.ScrollingFrame.List;
+      local userdata_3 = game:GetService("Players").LocalPlayer.PlayerGui.MainGui.Menu.Emotions.ScrollingFrame.List.Template;
+      local table_2 = {
+          ["Name"] = 'Clap',
+          ["GroupColor"] = 'Bright blue'
+      };
+      local table_1 = {
+          ["Sleep"] = {
+              ["SoundLooped"] = true,
+              ["R15"] = 4308418502,
+              ["FaceId"] = 66329905,
+              ["Object"] = 'Sleep',
+              ["Name"] = 'Sleep',
+              ["R6"] = 868450390,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["Volume"] = soundVolume,
+              ["MovementCancel"] = true
+          },
+          ["Bye"] = {
+              ["Name"] = 'Bye',
+              ["R6"] = 154179312,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308390587,
+              ["Object"] = 'Bye'
+          },
+          ["Point"] = {
+              ["Name"] = 'Point',
+              ["R6"] = 154188723,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308408568,
+              ["Object"] = 'Point'
+          },
+          ["Bathtub"] = {
+              ["Name"] = 'Bathtub',
+              ["R6"] = 1799552363,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["R15"] = 1794938782,
+              ["Object"] = 'Bathtub'
+          },
+          ["Glee"] = {
+              ["Object"] = 'Glee',
+              ["Name"] = 'Glee',
+              ["FaceId"] = 27802003,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308399012,
+              ["R6"] = 154159852
+          },
+          ["Coffin"] = {
+              ["Name"] = 'Coffin',
+              ["MovementCancel"] = true,
+              ["R15"] = 2506115448,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["Object"] = 'Coffin',
+              ["R6"] = 2506141081
+          },
+          ["Twist"] = {
+              ["Name"] = 'Twist',
+              ["MovementCancel"] = true,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308333353,
+              ["Object"] = 'Twist'
+          },
+          ["ToolHold"] = {
+              ["Name"] = 'ToolHold',
+              ["R6"] = 182393478,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308323620,
+              ["Object"] = 'ToolHold'
+          },
+          ["Confused"] = {
+              ["Object"] = 'Confused',
+              ["Name"] = 'Confused',
+              ["FaceId"] = 120250454,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308393154,
+              ["R6"] = 154183110
+          },
+          ["DrinkSmoothie"] = {
+              ["Object"] = 'DrinkSmoothie',
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["Name"] = 'DrinkSmoothie',
+              ["R15"] = 3339779154
+          },
+          ["DrinkCoffee"] = {
+              ["Object"] = 'DrinkCoffee',
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["Name"] = 'DrinkCoffee',
+              ["R15"] = 3339576493
+          },
+          ["Shocked"] = {
+              ["Object"] = 'Shocked',
+              ["Name"] = 'Shocked',
+              ["FaceId"] = 1601874588,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 1602091152,
+              ["R6"] = 1620310558
+          },
+          ["Laugh"] = {
+              ["Object"] = 'Laugh',
+              ["Name"] = 'Laugh',
+              ["FaceId"] = 32063242,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308402710,
+              ["R6"] = 154166518
+          },
+          ["Idle"] = {
+              ["Name"] = 'Idle',
+              ["Weight"] = 0.4,
+              ["R15"] = 507766388,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["Object"] = 'Idle',
+              ["R6"] = 180435571
+          },
+          ["Jump"] = {
+              ["Name"] = 'Jump',
+              ["Weight"] = 0.7,
+              ["R15"] = 507765000,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["Object"] = 'Jump',
+              ["R6"] = 125750702
+          },
+          ["Sad"] = {
+              ["Object"] = 'Sad',
+              ["Name"] = 'Sad',
+              ["FaceId"] = 76690153,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308410706,
+              ["R6"] = 153230853
+          },
+          ["Run"] = {
+              ["Name"] = 'Run',
+              ["Weight"] = 1,
+              ["R15"] = 507767714,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["Object"] = 'Run',
+              ["R6"] = 180426354
+          },
+          ["Swim"] = {
+              ["Name"] = 'Swim',
+              ["R6"] = 865902879,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["R15"] = 507784897,
+              ["Object"] = 'Swim'
+          },
+          ["SwimIdle"] = {
+              ["Name"] = 'SwimIdle',
+              ["Weight"] = 0.5,
+              ["R15"] = 507785072,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["Object"] = 'SwimIdle',
+              ["R6"] = 865918502
+          },
+          ["ConfusionOrb"] = {
+              ["Name"] = 'ConfusionOrb',
+              ["R6"] = 866550588,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 866541157,
+              ["Object"] = 'ConfusionOrb'
+          },
+          ["Punch"] = {
+              ["Name"] = 'Punch',
+              ["R6"] = 3175899997,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 3175791062,
+              ["Object"] = 'Punch'
+          },
+          ["Amazed"] = {
+              ["Object"] = 'Amazed',
+              ["Name"] = 'Amazed',
+              ["FaceId"] = 45528113,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 154174346,
+              ["R6"] = 154174346
+          },
+          ["Walk"] = {
+              ["Name"] = 'Walk',
+              ["Weight"] = 0.6,
+              ["R15"] = 507777826,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["Object"] = 'Walk',
+              ["R6"] = 180426354
+          },
+          ["Swing"] = {
+              ["Name"] = 'Swing',
+              ["MovementCancel"] = true,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308330448,
+              ["Object"] = 'Swing'
+          },
+          ["Shuffle"] = {
+              ["Name"] = 'Shuffle',
+              ["MovementCancel"] = true,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308343244,
+              ["Object"] = 'Shuffle'
+          },
+          ["Whistle"] = {
+              ["Object"] = 'Whistle',
+              ["Name"] = 'Whistle',
+              ["Weight"] = 0.4,
+              ["R15"] = 4308430737,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R6"] = 180435571,
+              ["FaceId"] = 22877631
+          },
+          ["Cheer"] = {
+              ["Object"] = 'Cheer',
+              ["Name"] = 'Cheer',
+              ["FaceId"] = 27802003,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 507770677,
+              ["R6"] = 129423030
+          },
+          ["Evil"] = {
+              ["Object"] = 'Evil',
+              ["Name"] = 'Evil',
+              ["FaceId"] = 1604383339,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308438228,
+              ["R6"] = 1620296629
+          },
+          ["HipHop"] = {
+              ["Name"] = 'HipHop',
+              ["MovementCancel"] = true,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308346808,
+              ["Object"] = 'HipHop'
+          },
+          ["Dance2"] = {
+              ["Name"] = 'Dance2',
+              ["MovementCancel"] = true,
+              ["R15"] = 507776043,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["Object"] = 'Dance2',
+              ["R6"] = 182436842
+          },
+          ["Dance3"] = {
+              ["Name"] = 'Dance3',
+              ["MovementCancel"] = true,
+              ["R15"] = 507777268,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["Object"] = 'Dance3',
+              ["R6"] = 182436935
+          },
+          ["SitSeat"] = {
+              ["Name"] = 'SitSeat',
+              ["Weight"] = 0.99,
+              ["R15"] = 2506281703,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["Object"] = 'SitSeat',
+              ["R6"] = 178130996
+          },
+          ["Think"] = {
+              ["Object"] = 'Think',
+              ["Name"] = 'Think',
+              ["FaceId"] = 209715003,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308415882,
+              ["R6"] = 154185274
+          },
+          ["Wave"] = {
+              ["Name"] = 'Wave',
+              ["R6"] = 128777973,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 507770239,
+              ["Object"] = 'Wave'
+          },
+          ["Eat"] = {
+              ["Object"] = 'Eat',
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["Name"] = 'Eat',
+              ["R15"] = 3343204532
+          },
+          ["Fall"] = {
+              ["Name"] = 'Fall',
+              ["Weight"] = 0.7,
+              ["R15"] = 507767968,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["Object"] = 'Fall',
+              ["R6"] = 180436148
+          },
+          ["ThrowCoin"] = {
+              ["Name"] = 'ThrowCoin',
+              ["R6"] = 156055482,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 867194400,
+              ["Object"] = 'ThrowCoin'
+          },
+          ["Easy"] = {
+              ["Name"] = 'Easy',
+              ["MovementCancel"] = true,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308337079,
+              ["Object"] = 'Easy'
+          },
+          ["Driving"] = {
+              ["Name"] = 'Driving',
+              ["Weight"] = 0.99,
+              ["R15"] = 866020346,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["Object"] = 'Driving',
+              ["R6"] = 178130996
+          },
+          ["Sit"] = {
+              ["Name"] = 'Sit',
+              ["MovementCancel"] = true,
+              ["R15"] = 4308421826,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["Object"] = 'Sit',
+              ["R6"] = 868508890
+          },
+          ["SleepSeat"] = {
+              ["SoundLooped"] = true,
+              ["R15"] = 4308318405,
+              ["FaceId"] = 66329905,
+              ["Object"] = 'SleepSeat',
+              ["Name"] = 'SleepSeat',
+              ["R6"] = 869468579,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["Volume"] = soundVolume,
+              ["MovementCancel"] = true
+          },
+          ["Marashin"] = {
+              ["Name"] = 'Marashin',
+              ["MovementCancel"] = true,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308362239,
+              ["Object"] = 'Marashin'
+          },
+          ["Scared"] = {
+              ["Object"] = 'Scared',
+              ["Name"] = 'Scared',
+              ["FaceId"] = 47206380,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308413393,
+              ["R6"] = 154170755
+          },
+          ["Clap"] = {
+              ["Name"] = 'Clap',
+              ["R6"] = 868730451,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308424082,
+              ["Object"] = 'Clap'
+          },
+          ["HipHop2"] = {
+              ["Name"] = 'HipHop2',
+              ["MovementCancel"] = true,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308356261,
+              ["Object"] = 'HipHop2'
+          },
+          ["Die"] = {
+              ["Object"] = 'Die',
+              ["R15"] = 4308443969,
+              ["Name"] = 'Die',
+              ["MovementCancel"] = true,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R6"] = 1620270981,
+              ["FaceId"] = 1604616024
+          },
+          ["Disgust"] = {
+              ["Object"] = 'Disgust',
+              ["Name"] = 'Disgust',
+              ["FaceId"] = 1598203828,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308435046,
+              ["R6"] = 1620305485
+          },
+          ["Hi"] = {
+              ["Name"] = 'Hi',
+              ["R6"] = 154179312,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308390587,
+              ["Object"] = 'Hi'
+          },
+          ["Flair"] = {
+              ["Name"] = 'Flair',
+              ["MovementCancel"] = true,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308358633,
+              ["Object"] = 'Flair'
+          },
+          ["Dance"] = {
+              ["Name"] = 'Dance',
+              ["MovementCancel"] = true,
+              ["R15"] = 507771019,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["Object"] = 'Dance',
+              ["R6"] = 182435998
+          },
+          ["Climb"] = {
+              ["Name"] = 'Climb',
+              ["R6"] = 180436334,
+              ["Priority"] = 'Enum.AnimationPriority.Core',
+              ["R15"] = 507765644,
+              ["Object"] = 'Climb'
+          },
+          ["WashHands"] = {
+              ["Name"] = 'WashHands',
+              ["R6"] = 1620296629,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 1799726387,
+              ["Object"] = 'WashHands'
+          },
+          ["ScaredOpeingPumpkin"] = {
+              ["Object"] = 'ScaredOpeingPumpkin',
+              ["Name"] = 'ScaredOpeingPumpkin',
+              ["FaceId"] = 47206380,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Idle',
+              ["R15"] = 867226524,
+              ["R6"] = 154170755
+          },
+          ["Angry"] = {
+              ["Object"] = 'Angry',
+              ["Name"] = 'Angry',
+              ["FaceId"] = 14020216,
+              ["SoundId"] = audioId,
+              ["Priority"] = 'Enum.AnimationPriority.Action',
+              ["R15"] = 4308387518,
+              ["R6"] = 154168543
+          }
+      };
+      local Target = game:GetService("Workspace").Main.LoadSoundsIntoHead;
+      for index, sound in pairs(game:service'Players'.LocalPlayer.Character.Head:GetChildren()) do
+          if sound:IsA'Sound' then
+              sound:Destroy()
+          end
+      end
+      Target:FireServer(table_1)
+      wait(.75)
+      game:GetService("Players").LocalPlayer.PlayerGui.UIEvents.ListItemPressed:Fire(userdata_1, userdata_2, userdata_3, table_2);
+  end)
+  vol.Name = "vol"
+  vol.Parent = musicplayer
+  vol.BackgroundColor3 = Color3.fromRGB(98, 37, 209)
+  vol.BorderColor3 = Color3.fromRGB(255, 255, 255)
+  vol.BorderSizePixel = 5
+  vol.Position = UDim2.new(0.0660792887, 0, 0.432029068, 0)
+  vol.Size = UDim2.new(0, 392, 0, 50)
+  vol.ClearTextOnFocus = false
+  vol.Font = Enum.Font.GothamBold
+  vol.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+  vol.PlaceholderText = "suck my dick nigger"
+  vol.Text = ""
+  vol.TextColor3 = Color3.fromRGB(255, 255, 255)
+  vol.TextScaled = true
+  vol.TextSize = 14.000
+  vol.TextWrapped = true
+  warn.Name = "warn"
+  warn.Parent = musicplayer
+  warn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+  warn.BackgroundTransparency = 1.000
+  warn.Position = UDim2.new(0.0639003664, 0, 0.876654744, 0)
+  warn.Size = UDim2.new(0, 392, 0, 33)
+  warn.Font = Enum.Font.GothamBold
+  warn.Text = "Get fucked baby"
+  warn.TextColor3 = Color3.fromRGB(255, 255, 255)
+  warn.TextScaled = true
+  warn.TextSize = 14.000
+  warn.TextWrapped = true
+  -- Animations
+  while true do
+Title.Text = ""
+wait(0.3)
+Title.Text = "F"
+wait(0.3)
+Title.Text = "Fa"
+wait(0.3)
+Title.Text = "Far"
+wait(0.3)
+Title.Text = "Farz"
+wait(0.3)
+Title.Text = "Farza"
+wait(0.3)
+Title.Text = "Farzad"
+wait(0.3)
+Title.Text = "Farzad L"
+wait(0.3)
+Title.Text = "Farzad Li"
+wait(0.3)
+Title.Text = "Farzad Lik"
+wait(0.3)
+Title.Text = "Farzad Like"
+wait(0.3)
+Title.Text = "Farzad Likes"
+wait(0.3)
+Title.Text = "Farzad Likes K"
+wait(0.3)
+Title.Text = "Farzad Likes Ki"
+wait(0.3)
+Title.Text = "Farzad Likes Kid"
+wait(0.3)
+Title.Text = "Farzad Likes Kids"
+wait(0.3)
+Title.Text = "Farzad Likes Kids X"
+wait(0.3)
+Title.Text = "Farzad Likes Kids XD"
+wait(0.3)
+end
